@@ -1,79 +1,36 @@
 nav
-  width: 90%
-  max-width: 800px
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  color: $white;
-  z-index: 999;
-  margin-top: 2em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  &.sticky-nav
-    position: fixed;
-    width: 100%
-    max-width: 100%
+  width: 300px
+  background-color: $nav-bg
+  border-right: 1.5em solid $yellow
+  position: fixed;
+  z-index: 999
+  height: 100vh
+  box-shadow: 0 0 20px rgba($black, 0.3)
+  a.logo
+    img
+      padding-top: 1em
+  ul.navbar
+    list-style: none
+    text-align: center;
     margin: 0
-    padding: 1em 3em
-    background-color: rgba($black, 0.5)
-  span.logo
-    font-size: 2em;
-    font-weight: 900;
-    font-family: "Roboto Slab";
-    letter-spacing: 4px
-    transition: all 200ms ease-in-out
-    em
-      font-style: normal;
-      font-weight: 100;
-    &:hover
-      color: lighten($red, 50%)
+    padding: 0
+    padding-top: 5em
+    position: absolute;
+    width: calc(300px - 1.5em);
+    top: 50%;
+    transform: translateY(-50%);
+    li a
+      text-decoration: none;
+      img
+        width: 30%
+      span
+        display: block;
+        color: $purple
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 4px
+        font-family: "Neou"
+        line-height: 2.5
+
   .hamburger-menu
     display: none;
-  ul.navbar
-    list-style: none;
-    display: flex;
-    li a
-      font-size: 0.8em
-      font-family: "Roboto"
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 4px
-      margin: 0 0 0 3em
-      padding-bottom: 0em
-      color: $white
-      text-decoration: none;
-      transition: all 200ms cubic-bezier(0.33, 0.2, 0.14, 1.46)
-      &:hover
-        color: lighten($red, 50%)
-        padding-bottom: 0.5em
-        border-bottom: 3px solid
-
-@media (max-width: 780px)
-  nav
-    flex-wrap: wrap;
-    .hamburger-menu
-      display: block;
-    ul.navbar
-      flex-wrap: wrap;
-      width: 100%;
-      margin: 0;
-      margin-top: 1em
-      padding: 0;
-      display: none;
-      li
-        width: 100%;
-        a
-          display: block;
-          width: 100%
-          margin: 0
-          padding: 1.5em;
-          text-align: center;
-          background-color: #666;
-          border-top: 1px solid #888
-          &:hover
-            color: $white
-            padding-bottom: 1.5em;
-            border-bottom: none
-            background-color: lighten($red, 50%)
